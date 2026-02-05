@@ -3,6 +3,10 @@
 In this assignment, we are asked to implement and visualize the fundamental concepts of the two-dimensional Discrete Fourier Transform (2-D DFT). 
 The objectives include generating the 8×8 2-D DFT basis functions, creating a binary image containing a rectangular region, computing the 2-D DFT of the image using the direct summation formula (without using any built-in FFT/DFT functions), and analyzing the effect of frequency centering. 
 
+## Extension:
+
+In the initial implementation, the two-dimensional Discrete Fourier Transform was computed using direct summation in accordance with the problem constraints. As an extension to the assignment, a Fast Fourier Transform (FFT)-based implementation is introduced to compare computational efficiency and spectral equivalence between manual DFT and FFT-based approaches.
+
 ## User Inputs includes:
 
 The program must prompt the user to enter the following parameters:
