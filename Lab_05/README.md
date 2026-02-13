@@ -11,12 +11,16 @@ The objectives include estimation of the type of noise present in the given imag
 
 # Conclusion
 
-The experiment successfully demonstrates histogram-based noise estimation and image restoration using spatial and frequency-domain techniques. From the experimental results, Images 1 to 5 were classified under the category Random / Uniform-type noise, Image 6 was identified as Salt & Pepper noise, and Image 7 was correctly identified as Periodic noise. Appropriate filters were applied accordingly: mean filtering for random noise, median filtering for impulse noise, and notch filtering for periodic noise. The PSNR values confirm that the selected restoration methods improve image quality, particularly in the case of salt-and-pepper noise where significant improvement is observed.
+The experiment successfully implements histogram-based noise estimation followed by both spatial-domain and frequency-domain filtering for image restoration. Based on histogram characteristics and frequency spectrum analysis, Images 1–5 were classified as Random noise, Image 6 as Salt & Pepper noise, and Image 7 as Periodic noise.
+For each noisy image, both spatial filtering (mean/median filter) and frequency filtering (low-pass/notch filter) were applied. The PSNR values indicate that for random noise, spatial and frequency filtering yield comparable performance. For Salt & Pepper noise, spatial median filtering significantly outperforms frequency filtering. For periodic noise, frequency-domain notch filtering is specifically applied, demonstrating the necessity of frequency-based techniques for structured interference.
 
 ## Justification of Noise Classification and Result Validity:
 
-Although the textbook describes Gaussian, Rayleigh, Erlang, Exponential, and Uniform noise as distinct theoretical models, these noise types exhibit very similar broadband characteristics once added to an image. When image content and quantization effects are present, their histograms tend to overlap significantly, making precise blind separation difficult using only histogram statistics. Therefore, Images 1 to 5 were grouped under a broader Random / Uniform-type noise category based on their similar statistical behavior.
+Although the textbook introduces Gaussian, Rayleigh, Erlang, Exponential, and Uniform noise as distinct theoretical distributions, these noise types exhibit similar broadband behavior once superimposed on image content. When only the noisy image is available, histogram-based estimation cannot reliably separate these distributions due to overlapping statistical characteristics. Therefore, Images 1–5 were grouped under the broader category of Random noise based on their similar histogram shapes and absence of impulse or periodic characteristics.
+Salt & Pepper noise was distinctly identified due to the presence of strong intensity impulses at extreme gray levels, clearly visible in the histogram. Periodic noise was detected through dominant peaks in the Fourier spectrum, which is a well-established method for identifying sinusoidal interference.
+The PSNR comparison between spatial and frequency-domain filtering further validates the correctness of the classification:
+- Random noise: Similar PSNR values for spatial and frequency filters confirm broadband characteristics.
+- Salt & Pepper noise: Higher PSNR for spatial median filtering confirms its suitability for impulse noise.
+- Periodic noise: Frequency-domain notch filtering is specifically designed for structured sinusoidal components.
 
-In contrast, Salt & Pepper noise was distinctly identified due to the presence of strong impulses at intensity extremes, which is clearly observable in the histogram. Periodic noise was correctly detected using frequency-domain analysis, where dominant isolated peaks appear in the Fourier spectrum.
-
-Since the restoration method for Gaussian-family random noise models is similar (linear smoothing filters), grouping these noise types does not affect the validity of the restoration process. The improvement in PSNR values confirms that the applied filtering techniques are appropriate and that the overall results are both experimentally consistent and theoretically justified.
+Since the applied filtering methods align with theoretical expectations and produce consistent quantitative improvements, the results are experimentally valid.
