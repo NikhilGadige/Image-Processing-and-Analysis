@@ -1,6 +1,6 @@
-# Color Image Processing Demo (MATLAB)
+# Problem Statement:
 
-This folder contains a MATLAB script `color_image_processing.m` that demonstrates a set of classical color-image processing operations on an input RGB image.
+In this assignment, we are asked to recreate all the Image Enhancements of Chapter 3 from the textbook but for colour image, by performing colour image processing.
 
 ## 📌 What this script does
 
@@ -35,22 +35,8 @@ It also includes manual conversion functions:
 - `rgb_to_hsv_manual(rgb)`
 - `hsv_to_rgb_manual(hsv)`
 
-## 🔧 How to run
+## Running Instructions
 
-1. Open MATLAB and set the current folder to this repository (`d:\Lab_6`).
-2. Make sure `butterfly.jpeg` is present in the folder (or update the script to load your image).
-3. Run:
-
-```matlab
-color_image_processing
-```
-
-The script will display the result images in multiple figure windows (4 images per window).
-
-## ✅ Requirements
-
-- MATLAB (tested on modern versions with Image Processing functions)
-- A color JPEG image file named `butterfly.jpeg` in the same folder (or update the filename in the script)
-
-
-
+1. Place the matlab code file “colour_processing.m” with the input image(butterfly.jpeg) in the same folder.
+2. Run the Matlab code file.
+3. The corresponding results are displayed.
