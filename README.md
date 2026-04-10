@@ -1,5 +1,7 @@
 # Image Processing and Analysis - Semester 6 Lab Submissions
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/AnujSaha0111/Adaptive-and-Learning-Guided-Extensions-of-Semi-Sparsity-for-Image-Smoothing)
+
 This repository contains the complete set of lab submissions for the Semester 6 course **Image Processing and Analysis**.
 
 Each lab includes MATLAB programs, related input/output assets (where applicable), and a dedicated README describing objectives, methodology, and observations.
